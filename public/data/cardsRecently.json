@@ -1,0 +1,41 @@
+{
+  "cards": [
+    {
+      "order": 1,
+      "type": "RecentlyModifiedCard",
+      "header": {
+        "title": "Review brand blocks"
+      },
+      "isResizable": true,
+      "isMovable": false,
+      "isRemovable": false,
+      "cardWidth": "S",
+      "items": [
+        {
+          "id": "1",
+          "name": "Brand block 1",
+          "date": "2024-12-15",
+          "type": "Link"
+        },
+        {
+          "id": "2",
+          "name": "Brand block 2",
+          "date": "2024-12-11",
+          "type": "Link"
+        },
+        {
+          "id": "3",
+          "name": "Brand block 3",
+          "date": "2024-11-11",
+          "type": "Link"
+        },
+        {
+          "id": "4",
+          "name": "Brand block 4",
+          "date": "2021-12-11",
+          "type": "Link"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "cards": [
+    {
+      "order": 1,
+      "type": "PerformanceCard",
+      "header": {
+        "title": "Deals"
+      },
+      "isResizable": false,
+      "isMovable": false,
+      "isRemovable": false,
+      "cardWidth": "S",
+      "items": [],
+      "performanceType": "success",
+      "amount": 16343,
+      "percentage": 12
+    },
+    {
+      "order": 2,
+      "type": "PerformanceCard",
+      "header": {
+        "title": "Managed"
+      },
+      "isResizable": false,
+      "isMovable": false,
+      "isRemovable": false,
+      "cardWidth": "S",
+      "items": []
+    },
+    {
+      "order": 3,
+      "type": "PerformanceCard",
+      "header": {
+        "title": "PSP"
+      },
+      "isResizable": false,
+      "isMovable": false,
+      "isRemovable": false,
+      "cardWidth": "S",
+      "items": []
+    }
+  ]
+}
