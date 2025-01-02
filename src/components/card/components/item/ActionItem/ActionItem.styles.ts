@@ -4,7 +4,7 @@ const useStyles = makeStyles({
     root: {
         display: "flex",
         alignItems: "center",
-        justifyContent: "center",
+        justifyContent: "space-between",
         padding: "10px 16px",
         gap: "10px",
         borderRadius: "4px",

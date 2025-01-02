@@ -1,5 +1,9 @@
 import { formatPercentage, formatPrice, getRandomId } from "../NumberUtils"
 
+Object.defineProperty(global.crypto, 'randomUUID', {
+    value: jest.fn().mockReturnValue('testuuid')
+});
+
 describe('Number utils', () => {
     it('should format price', () => {
         const price = 1234.56

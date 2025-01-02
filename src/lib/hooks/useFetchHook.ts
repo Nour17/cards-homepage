@@ -17,6 +17,7 @@ function useFetch<T>(fetchFn: () => Promise<T>) {
             }
         }
 
+
         fetchData()
     }, [fetchFn])
 

@@ -1,22 +1,22 @@
 import Card from '../../Card'
 import PerformanceItem from './components/PerformanceItem'
 import Tag from '../../components/tag/Tag'
-import { usePerformanceSummaryStyles } from './PerformanceCard.styles'
+import { usePerformanceSummaryStyles, usePerformanceCardStyles } from './PerformanceCard.styles'
 import { PerformanceCardProps, PerformanceSummaryProps, PerformanceType } from './PerformanceCard.types'
 import { formatPercentage, formatPrice } from '../../../../lib/utils/NumberUtils'
 import { CardProps } from '@/lib/types/CardTypes'
 import AreaChartComponent from '@/components/charts/AreaChart'
-import { JSX, useRef } from 'react'
+import React from 'react'
 
 function priceSign(type: PerformanceType): string {
     return type === PerformanceType.FAILURE ? '-' : ''
 }
 
-function PerformanceSummary({ type, amount, percentage, isTagFill }: PerformanceSummaryProps): JSX.Element {
+function PerformanceSummary({ type, amount, percentage, isTagFill }: PerformanceSummaryProps): React.JSX.Element {
     const performanceSummaryStyles = usePerformanceSummaryStyles()
 
     return (
-        <div className={performanceSummaryStyles.root}>
+        <div data-testId="performance-summary" className={performanceSummaryStyles.root}>
             {
                 amount &&
                 <div className={performanceSummaryStyles.amount}>
@@ -27,13 +27,13 @@ function PerformanceSummary({ type, amount, percentage, isTagFill }: Performance
                 percentage &&
                 <Tag type={type} data={formatPercentage(percentage)} fill={isTagFill} />
             }
-        </div>
+        </div >
     )
 }
 
-export default function PerformanceCard(props: PerformanceCardProps): JSX.Element {
+export default function PerformanceCard(props: PerformanceCardProps): React.JSX.Element {
+    const performanceCardStyles = usePerformanceCardStyles()
     const { performanceType, amount, percentage } = props
-    const chartContainerRef = useRef<HTMLDivElement>(null)
 
     const cardProps: CardProps = {
         ...props,
@@ -46,15 +46,15 @@ export default function PerformanceCard(props: PerformanceCardProps): JSX.Elemen
 
     return (
         <Card {...cardProps} >
-            <div className='w-full min-h-fit'>
-                <div ref={chartContainerRef} id={`chart-${props.id}`} className='h-[150px]'>
-                    <AreaChartComponent parentRef={chartContainerRef.current as HTMLElement} containerId={`chart-${props.id}`} data={props.data} performanceType={performanceType} />
+            <div data-testId="performance-card" className={performanceCardStyles.root}>
+                <div id={`chart-${props.id}`} className={performanceCardStyles.chartContainer}>
+                    <AreaChartComponent containerId={`chart-${props.id}`} data={props.data} performanceType={performanceType} />
                 </div>
-                <div className='px-[20px]'>
+                <div className={performanceCardStyles.dimensionsContainer}>
                     {
                         props.dimensions && Object.keys(props.dimensions).map((dimension, index) => (
                             <div key={index}>
-                                <div className='text-[12px] mb-[8px] leading-[16px] py-[3px]'>
+                                <div className={performanceCardStyles.dimensionTitle}>
                                     Top contributing {dimension}
                                 </div>
                                 {

@@ -1,7 +1,7 @@
 import { FetchInsightsResponse, FetchPerformanceSummaryRequestParams } from "./entities/insights"
 
 export async function fetchInsights() {
-    const response = await fetch('/api/data/insights.json')
+    const response = await fetch('/data/insights.json')
     if (!response.ok) {
       throw new Error('Network response was not ok')
     }

@@ -1,5 +1,3 @@
-import crypto from 'crypto';
-
 export function formatPrice(price: number, currency: string, locale: string = 'en-US', digits: number = 0): string {
     return new Intl.NumberFormat(locale, { style: 'currency', currency, maximumFractionDigits: digits, minimumFractionDigits: digits }).format(price)
 }

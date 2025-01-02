@@ -11,7 +11,7 @@ export const insightResponse = {
         {
           "root_level_value": "open_exchange",
           "metric": 42939962.4555,
-          "pct_diff": 21.2888,
+          "pct_diff": -21.2888,
           "diff": 7536883.8042,
           "chart": [
             {

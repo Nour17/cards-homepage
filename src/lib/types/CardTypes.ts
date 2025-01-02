@@ -1,10 +1,10 @@
 import Card from "@/components/card/Card";
 import { CardHeaderProps } from "@/components/card/components/header/CardHeader";
+import RecentlyModifiedCard from "@/components/card/types/RecentlyModifiedCard/RecentlyModifiedCard";
+import SavedReportsCard from "@/components/card/types/SavedReportsCard/SavedReportsCard";
 // import LineItemIssuesCard from "@/components/card/types/LineItemIssuesCard";
 // import PerformanceCard from "@/components/card/types/PerformanceCard/PerformanceCard";
-// import RecentlyModifiedCard from "@/components/card/types/RecentlyModifiedCard";
 // import ReviewBrandBlocksCard from "@/components/card/types/ReviewBrandBlocksCard";
-// import SavedReportsCard from "@/components/card/types/SavedReportsCard";
 import { ReactNode } from "react";
 
 export enum CardSize {
@@ -20,10 +20,9 @@ export enum CardType {
 
 export const CardTypesMap = {
     "Card": Card,
-    // "SavedReportsCard": SavedReportsCard,
-    // "RecentlyModifiedCard": RecentlyModifiedCard,
+    "SavedReportsCard": SavedReportsCard,
+    "RecentlyModifiedCard": RecentlyModifiedCard,
     // "ReviewBrandBlocksCard": ReviewBrandBlocksCard,
-    // "PerformanceCard": PerformanceCard,
     // "LineItemIssuesCard": LineItemIssuesCard,
 }
 

@@ -21,7 +21,7 @@ const useStyles = makeStyles({
     color: 'var(--colorNeutralForeground2)',
     textOverflow: 'ellipsis',
     overflow: 'hidden',
-    whiteSpace: 'nowrap',
+    // whiteSpace: 'nowrap',
   },
 });
 

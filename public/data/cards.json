@@ -1,42 +1,6 @@
 {
   "cards": [
     {
-      "order": 1,
-      "type": "PerformanceCard",
-      "header": {
-        "title": "Deals"
-      },
-      "isResizable": false,
-      "isMovable": false,
-      "isRemovable": false,
-      "cardWidth": "S",
-      "items": []
-    },
-    {
-      "order": 2,
-      "type": "PerformanceCard",
-      "header": {
-        "title": "Managed"
-      },
-      "isResizable": false,
-      "isMovable": false,
-      "isRemovable": false,
-      "cardWidth": "S",
-      "items": []
-    },
-    {
-      "order": 3,
-      "type": "PerformanceCard",
-      "header": {
-        "title": "PSP"
-      },
-      "isResizable": false,
-      "isMovable": false,
-      "isRemovable": false,
-      "cardWidth": "S",
-      "items": []
-    },
-    {
       "order": 3,
       "type": "RecentlyModifiedCard",
       "header": {
@@ -45,31 +9,43 @@
       "isResizable": true,
       "isMovable": false,
       "isRemovable": false,
-      "cardWidth": "S",
+      "cardSize": "S",
       "items": [
         {
           "id": "1",
           "name": "Brand block 1",
           "date": "2024-12-15",
-          "type": "Link"
+          "type": "Link",
+          "link": {
+            "to": "/brand-blocks/1"
+          }
         },
         {
           "id": "2",
           "name": "Brand block 2",
           "date": "2024-12-11",
-          "type": "Link"
+          "type": "Link",
+          "link": {
+            "to": "/brand-blocks/1"
+          }
         },
         {
           "id": "3",
           "name": "Brand block 3",
           "date": "2024-11-11",
-          "type": "Link"
+          "type": "Link",
+          "link": {
+            "to": "/brand-blocks/1"
+          }
         },
         {
           "id": "4",
           "name": "Brand block 4",
           "date": "2021-12-11",
-          "type": "Link"
+          "type": "Link",
+          "link": {
+            "to": "/brand-blocks/1"
+          }
         }
       ]
     },
@@ -82,7 +58,7 @@
       "isResizable": true,
       "isMovable": false,
       "isRemovable": false,
-      "cardWidth": "S",
+      "cardSize": "S",
       "items": [
         {
           "id": "1",
@@ -103,101 +79,6 @@
           "type": "Action"
         }
       ]
-    },
-    {
-      "order": 5,
-      "type": "ReviewBrandBlocksCard",
-      "header": {
-        "title": "Review brand blocks"
-      },
-      "isResizable": false,
-      "isMovable": false,
-      "isRemovable": false,
-      "cardWidth": "S",
-      "items": []
-    },
-    {
-      "order": 6,
-      "type": "LineItemIssuesCard",
-      "header": {
-        "title": "Line Item Issues"
-      },
-      "isResizable": true,
-      "isMovable": false,
-      "isRemovable": false,
-      "cardWidth": "S",
-      "linksGroup": [
-        {
-          "title": "Under delivery",
-          "links": [
-            {
-              "id": "1",
-              "name": "5 ending today",
-              "date": "2024-12-15",
-              "type": "Link"
-            },
-            {
-              "id": "2",
-              "name": "12 ending within 3 days",
-              "date": "2024-12-11",
-              "type": "Link"
-            }
-          ]
-        },
-        {
-          "title": "Missing creatives",
-          "links": [
-            {
-              "id": "3",
-              "name": "3 starting today",
-              "date": "2024-11-11",
-              "type": "Link"
-            },
-            {
-              "id": "4",
-              "name": "13 starting within 3 days",
-              "date": "2021-12-11",
-              "type": "Link"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "order": 7,
-      "type": "Card",
-      "header": {
-        "title": "Card 7"
-      },
-      "isResizable": false,
-      "isMovable": false,
-      "isRemovable": false,
-      "cardWidth": "S",
-      "items": []
-    },
-    {
-      "order": 8,
-      "type": "Card",
-      "header": {
-        "title": "Card 8"
-      },
-      "isResizable": false,
-      "isMovable": false,
-      "isRemovable": false,
-      "cardWidth": "L",
-      "items": []
-    },
-    {
-      "order": 9,
-      "type": "Card",
-      "header": {
-        "title": "Card 9"
-      },
-      "isResizable": false,
-      "isMovable": false,
-      "isRemovable": false,
-      "cardWidth": "S",
-      "items": []
     }
   ]
 }

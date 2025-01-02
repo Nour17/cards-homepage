@@ -3,7 +3,7 @@ import IconsLink from '@/assets/icons/IconLink'
 import useStyles from './LinkItem.styles'
 
 export type DateProps = {
-    date?: string | Date,
+    date: string | Date,
     showDate?: boolean
     render?: (date: string) => string,
 }
@@ -34,11 +34,11 @@ export default function LinkItem({ item }: { item: LinkItemProps }): JSX.Element
         <a href={item.link.to} target='_blank' rel="noopener noreferrer" className={styles.root} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <div className={styles.contentSection}>
                 <div className={styles.leftSection}>
-                    <span>{item.renderTitle ? item.renderTitle() : item.title}</span>
+                    <span className={styles.title}>{item.renderTitle ? item.renderTitle() : item.title}</span>
                     <span>{item.id}</span>
                 </div>
                 {
-                    showDate && (<span className={styles.rightSection}>{item.date?.render?.(item.date.date?.toString() || '') || item.date?.date?.toString()}</span>)
+                    item.date && showDate && (<span className={styles.rightSection}>{item.date.render?.(item.date.date.toString()) || item.date.date.toString()}</span>)
                 }
             </div>
             {

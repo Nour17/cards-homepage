@@ -1,4 +1,4 @@
-import { CardSize } from "@/lib/types/CardTypes"
+import { CardItemProps, CardSize } from "@/lib/types/CardTypes"
 
 export type CardFooterProps = {
     isExpandable: boolean,
@@ -11,5 +11,6 @@ export interface FetchCardsResponse {
     isResizable?: boolean,
     isMovable?: boolean,
     isRemovable?: boolean,
+    items?: CardItemProps[] 
     cardSize: CardSize
 }

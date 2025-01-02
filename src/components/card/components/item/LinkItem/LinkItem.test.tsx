@@ -35,8 +35,29 @@ describe('LinkItem', () => {
     })
 
     it('does not show the date if showDate is false', () => {
-        const itemWithoutDate = { ...mockItem, date: { ...mockItem.date, showDate: false } }
+        const date = {
+            date: '2023-10-10',
+            showDate: false,
+            render: (date: string) => `Rendered: ${date}`,
+        }
+        const itemWithoutDate = { ...mockItem, date }
         render(<LinkItem item={itemWithoutDate} />)
         expect(screen.queryByText('Rendered: 2023-10-10')).not.toBeInTheDocument()
+    })
+
+    it('show the title if render fn not provided', () => {
+        const itemWithoutRenderFn = { ...mockItem, renderTitle: undefined }
+        render(<LinkItem item={itemWithoutRenderFn} />)
+        expect(screen.getByText('Test Title')).toBeInTheDocument()
+    })
+
+    it('does show the date via date if no render', () => {
+        const date = {
+            date: '2023-10-10',
+            showDate: true
+        }
+        const itemWithoutRenderDateFn = { ...mockItem, date }
+        render(<LinkItem item={itemWithoutRenderDateFn} />)
+        expect(screen.getByText('2023-10-10')).toBeInTheDocument()
     })
 })
