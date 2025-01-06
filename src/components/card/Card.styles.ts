@@ -1,6 +1,6 @@
 import { makeStyles } from "@fluentui/react-theme-provider";
 
-export const useStyles = () => makeStyles({
+export const useStyles = makeStyles({
     root: {
         border: '2px solid #f9fafb',
         borderRadius: '8px',
@@ -26,4 +26,4 @@ export const useStyles = () => makeStyles({
         minHeight: 'fit-content',
         overflow: 'hidden',
     }
-})() 
+})

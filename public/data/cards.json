@@ -79,6 +79,61 @@
           "type": "Action"
         }
       ]
+    },
+    {
+      "order": 3,
+      "type": "LineItemIssuesCard",
+      "header": {
+        "title": "Line Item Issues"
+      },
+      "isResizable": false,
+      "isMovable": false,
+      "isRemovable": false,
+      "cardSize": "S",
+      "itemsGroup": [
+        {
+          "title": "Under delivery",
+          "items": [
+            {
+              "id": "1",
+              "name": "5 ending today",
+              "type": "Link",
+              "link": {
+                "to": "/brand-blocks/1"
+              }
+            },
+            {
+              "id": "2",
+              "name": "12 ending within 3 days",
+              "type": "Link",
+              "link": {
+                "to": "/brand-blocks/1"
+              }
+            }
+          ]
+        },
+        {
+          "title": "Missing creatives",
+          "items": [
+            {
+              "id": "3",
+              "name": "3 starting today",
+              "type": "Link",
+              "link": {
+                "to": "/brand-blocks/1"
+              }
+            },
+            {
+              "id": "4",
+              "name": "13 starting within 3 days",
+              "type": "Link",
+              "link": {
+                "to": "/brand-blocks/1"
+              }
+            }
+          ]
+        }
+      ]
     }
   ]
 }

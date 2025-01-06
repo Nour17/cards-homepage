@@ -1,9 +1,8 @@
 import Card from "@/components/card/Card";
 import { CardHeaderProps } from "@/components/card/components/header/CardHeader";
+import LineItemIssuesCard from "@/components/card/types/LineItemIssuesCard/LineItemIssuesCard";
 import RecentlyModifiedCard from "@/components/card/types/RecentlyModifiedCard/RecentlyModifiedCard";
 import SavedReportsCard from "@/components/card/types/SavedReportsCard/SavedReportsCard";
-// import LineItemIssuesCard from "@/components/card/types/LineItemIssuesCard";
-// import PerformanceCard from "@/components/card/types/PerformanceCard/PerformanceCard";
 // import ReviewBrandBlocksCard from "@/components/card/types/ReviewBrandBlocksCard";
 import { ReactNode } from "react";
 
@@ -23,7 +22,7 @@ export const CardTypesMap = {
     "SavedReportsCard": SavedReportsCard,
     "RecentlyModifiedCard": RecentlyModifiedCard,
     // "ReviewBrandBlocksCard": ReviewBrandBlocksCard,
-    // "LineItemIssuesCard": LineItemIssuesCard,
+    "LineItemIssuesCard": LineItemIssuesCard,
 }
 
 export type CardFooterProps = {
@@ -54,7 +53,7 @@ export type CardItemGroupProps = {
 export type CardItemProps = {
     name: string,
     id: string,
-    date: string,
+    date?: string,
     link?: CardItemLinkProps,
     actions?: ActionProps[]
 }

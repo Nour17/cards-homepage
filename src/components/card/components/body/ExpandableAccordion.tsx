@@ -4,7 +4,7 @@ import {
   AccordionItem,
   AccordionPanel,
 } from "@fluentui/react-components";
-import { NewsRegular } from '@fluentui/react-icons';
+import useStyles from "./ExpandableAccordion.styles";
 
 type MoreItemsAnchor = {
   type: string;
@@ -15,21 +15,29 @@ type MoreItemsAnchor = {
 export type ExpandableAccordionProps = {
   children: React.ReactNode[];
   maximumItems?: number;
-  moreAnchor?: MoreItemsAnchor
+  moreAnchor?: MoreItemsAnchor,
+  title: string;
+  icon?: React.ReactNode;
 }
 
 export default function ExpandableAccordion(props: ExpandableAccordionProps) {
+  const styles = useStyles();
   const showMore = props.moreAnchor && props.maximumItems && props.children.length > props.maximumItems
 
   return (
-    <Accordion collapsible className='w-full pb-[10px]'>
+    <Accordion collapsible className={styles.root}>
       <AccordionItem value="1">
-        <AccordionHeader><div className='flex gap-[5px] items-center'><NewsRegular fontSize={24} /> <div>Show blocked categories</div></div></AccordionHeader>
-        <AccordionPanel className="flex flex-col gap-[10px]">
+        <AccordionHeader expandIconPosition="end">
+          <div className={styles.header}>
+            {props.icon}
+            <div>{props.title}</div>
+          </div>
+        </AccordionHeader>
+        <AccordionPanel className={styles.panel}>
           {props.children.slice(0, props.maximumItems)}
           {
             showMore &&
-            <a href={props.moreAnchor!.to} target="_blank" rel="noopener noreferrer" className='text-[#616161] text-[14px] cursor-pointer'>
+            <a href={props.moreAnchor!.to} target="_blank" rel="noopener noreferrer" className={styles.moreLink}>
               {`+${props.children.length - props.maximumItems!} more ${props.moreAnchor!.type}`}
             </a>
           }

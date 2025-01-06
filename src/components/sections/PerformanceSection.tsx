@@ -63,6 +63,7 @@ export default function PerformanceSection(): React.JSX.Element {
                     percentage={card.pct_diff}
                     amount={card.metric}
                     type="PerformanceCard"
+                    isResizable={true}
                     performanceType={getPerformanceType(card.pct_diff)}
                     cardSize={CardSize.S} />)}
         </CardsWrapper>)

@@ -20,6 +20,7 @@ const useStyles = makeStyles({
         flexDirection: "column",
         justifyContent: "start",
         alignItems: "start",
+        padding: "3px 0px",
     },
     leftSection: {
         display: "flex",

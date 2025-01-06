@@ -4,6 +4,12 @@ import useContainerSizeHook from "../useContainerSizeHook"
 const observe = jest.fn()
 const unobserve = jest.fn()
 
+jest.mock('../useThrottleHook', () => ({
+  __esModule: true,
+  default: (fn: any) => fn,
+}))
+
+
 describe('useContainerSizeHook', () => {
     let mockElement = {
       clientWidth: 100,

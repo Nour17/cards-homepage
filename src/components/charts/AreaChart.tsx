@@ -28,7 +28,7 @@ type AreaChartComponentProps = {
 }
 
 export default function AreaChartComponent(props: AreaChartComponentProps): JSX.Element {
-    const containerSize = useContainerSizeHook(props.containerId, props.isResizable || true)
+    const containerSize = useContainerSizeHook(props.containerId, props.isResizable || true, 0)
 
     const chartPoints: ILineChartPoints[] = [{
         legend: '',

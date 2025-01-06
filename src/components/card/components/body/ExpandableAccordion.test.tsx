@@ -11,9 +11,9 @@ describe('ExpandableAccordion', () => {
   ];
 
   it('renders all items when maximumItems is not specified', () => {
-    render(<ExpandableAccordion children={children} />);
+    render(<ExpandableAccordion title='Show changelog' children={children} />);
 
-    const header = screen.getByText('Show blocked categories');
+    const header = screen.getByText('Show changelog');
     fireEvent.click(header);
 
     expect(screen.getByText('Item 1')).toBeInTheDocument();
@@ -25,13 +25,14 @@ describe('ExpandableAccordion', () => {
   it('renders only the maximum number of items and a "show more" link when maximumItems is specified', () => {
     render(
       <ExpandableAccordion
+        title='Show changelog'
         children={children}
         maximumItems={2}
         moreAnchor={{ type: 'categories', to: '/more-categories' }}
       />
     );
 
-    const header = screen.getByText('Show blocked categories');
+    const header = screen.getByText('Show changelog');
     fireEvent.click(header);
 
     expect(screen.getByText('Item 1')).toBeInTheDocument();
@@ -44,13 +45,14 @@ describe('ExpandableAccordion', () => {
   it('renders a clickable "show more" link with correct href', () => {
     render(
       <ExpandableAccordion
+        title='Show changelog'
         children={children}
         maximumItems={2}
         moreAnchor={{ type: 'categories', to: '/more-categories' }}
       />
     );
 
-    const header = screen.getByText('Show blocked categories');
+    const header = screen.getByText('Show changelog');
     fireEvent.click(header);
 
     const showMoreLink = screen.getByText('+2 more categories');
@@ -63,13 +65,14 @@ describe('ExpandableAccordion', () => {
   it('does not render "show more" link when maximumItems is greater than or equal to the number of children', () => {
     render(
       <ExpandableAccordion
+        title='Show changelog'
         children={children}
         maximumItems={4}
         moreAnchor={{ type: 'categories', to: '/more-categories' }}
       />
     );
 
-    const header = screen.getByText('Show blocked categories');
+    const header = screen.getByText('Show changelog');
     fireEvent.click(header);
 
     expect(screen.queryByText('more categories')).not.toBeInTheDocument();

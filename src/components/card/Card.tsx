@@ -30,7 +30,7 @@ const getGridColumnSpan = (width: CardProps['cardSize'], containerWidth: number)
 export default function Card(props: CardProps): React.JSX.Element {
   const styles = useStyles()
 
-  console.log('Card props', props)
+  // console.log('Card props', props)
 
   const containerSize = useWindowSizeHook(props.containerId)
   if (!props.children || !props.header) {
